@@ -3,6 +3,7 @@
 \ProvidesClass{paper_proposal}[2016/12/05 Research paper proposal class]
 
 \RequirePackage{titlesec}
+\RequirePackage{framed}
 
 \titleformat{\section}
   {\Large\scshape\raggedright}
@@ -14,3 +15,19 @@
   {\large\scshape\raggedright}
   {}{0em}
   {}
+
+\renewcommand{\maketitle}{
+  \begin{center}
+  \textsc{\Large\textbf{Research Paper Proposal}}
+  \end{center}
+}
+
+\newcommand{\details}[3]{
+  \begin{framed}
+  \begin{tabular}{ll}
+    \textbf{Title:} & #1 \\
+    \textbf{Author(s):} & #2 \\
+    \textbf{Venue(s):} & #3 \\
+  \end{tabular}
+  \end{framed}
+}
